@@ -31,6 +31,7 @@ contract Degen is ERC20 {
 
     constructor() ERC20("Degen", "DGN") {
         owner = msg.sender;
+        mint(msg.sender, 5000 * 10 ** decimals()); //premint 5000 tokens
     }
 
     modifier onlyOwner() {
@@ -48,8 +49,22 @@ contract Degen is ERC20 {
     }
 
     function redeem(uint256 _amount) external checkAmount(_amount) {
-        _burn(msg.sender, _amount);
-
+        if(_amount == 1){
+            require(balanceOf(msg.sender) >= 500 * 10 ** decimals());
+            _burn(msg.sender, 500 * 10 ** decimals());
+        }
+        else if(_amount == 2){
+            require(balanceOf(msg.sender) >= 200 * 10 ** decimals());
+            _burn(msg.sender, 200 * 10 ** decimals());
+        }
+        else if(_amount == 4){
+            require(balanceOf(msg.sender) >= 400 * 10 ** decimals());
+            _burn(msg.sender, 400 * 10 ** decimals());
+        }
+        else{
+            revert("Invalid number");
+        }
+        //Follow the pattern to add more else Ifs if needed
         emit Redeem(msg.sender, _amount);
     }
 
