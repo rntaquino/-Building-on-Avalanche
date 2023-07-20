@@ -92,7 +92,7 @@ Your account should be detected directly from your Metamask.
 
 For the contract, select "Degen - DegenToken_flatenned.sol."
 
-Then in the "At Address" button copy this contract address and paste it: 0x08F0C975385F1Eaf68aAAa927315b97d6314e706. Click the "At Address" button to deploy it.
+Then in the "At Address" button copy this contract address and paste it: 0x39f2C6E7c269F966C91ac66Cef4664FCE0757D8f. Click the "At Address" button to deploy it.
 
 The contract should be deployed after clicking the "At Address" button and found in the "Deployed Contracts" tab.
 
