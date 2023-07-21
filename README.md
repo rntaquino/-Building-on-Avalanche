@@ -90,7 +90,7 @@ For the environment, select "Injected Provider - Metamask."
 
 Your account should be detected directly from your Metamask.
 
-For the contract, select "Degen - DegenToken_flatenned.sol."
+For the contract, select "Degen - NewDegen.sol."
 
 Then in the "At Address" button copy this contract address and paste it: 0x39f2C6E7c269F966C91ac66Cef4664FCE0757D8f. Click the "At Address" button to deploy it.
 
